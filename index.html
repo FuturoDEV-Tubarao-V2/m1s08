@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Operações na Bolsa de Valores</title>
+    <link rel="stylesheet" href="css/estilos.css"> <!-- Link para o CSS externo -->
+    <script type="module" src="js/app.js"></script>
+</head>
+<body>
+    <header>
+        <h1 id="titulo-principal">Cadastro de Operações na Bolsa de Valores</h1>
+    </header>
+
+    <section id="formularioCadastro">
+        <h2>Cadastrar Nova Operação</h2>
+        <form id="cadastroOperacao">
+            <label for="dataOperacao">Data da Operação:</label>
+            <input type="date" id="dataOperacao" name="dataOperacao" required>
+
+            <label for="quantidadeAcoes">Quantidade de Ações:</label>
+            <input type="number" id="quantidadeAcoes" name="quantidadeAcoes" min="1" step="1" required>
+
+            <label for="valorAcao">Valor da Ação (R$):</label>
+            <input type="number" id="valorAcao" name="valorAcao" step="0.01" required>
+
+            <button type="submit">Cadastrar Operação</button>
+        </form>
+    </section>
+
+    <section id="tabelaOperacoes">
+        <h2>Operações Cadastradas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data da Operação</th>
+                    <th>Quantidade de Ações</th>
+                    <th>Valor Unitário (R$)</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-operacoes">
+                <!-- As operações cadastradas serão inseridas aqui -->
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>
